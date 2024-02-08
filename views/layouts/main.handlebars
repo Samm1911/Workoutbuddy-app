@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WORKOUT BUDDY FINDER</title>
+    <link rel="stylesheet" href="/css/styles.css">
+</head>
+
+<body>
+        <header class="header-section">
+            <h1 class="app-top-bar">
+                <span class="app-name">DTF</span>
+                <img class="main-image" src="/assets/man-running.png" alt="Person running.">
+            </h1>
+            <nav class="nav-bar">
+                {{#if logged_in}}
+                <a href="/postings" class="main-buttons">Postings</a>
+                <a href="/profile" class="main-buttons">Profile</a>
+                <button class="button main-buttons" id="signout">Sign Out</button>
+                {{/if}}
+            </nav>
+        </header>
+        <main class="card-container">
+           {{{ body }}}
+        </main>
+    <footer>
+        <p>DTF TEAM SINCE 2024</p>
+    </footer>
+
+    {{#if logged_in}}
+    <script src="/js/signout.js"></script>
+    {{/if}}
+    {{!-- <script src="/js/script.js"></script> --}}
+</body>
+
+</html>

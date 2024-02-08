@@ -1,0 +1,15 @@
+{{!-- <section class="card postings-page"> --}}
+{{#each postInfo}}
+    <section class="post">
+        {{!-- <section class="post-info"> --}}
+            <ul class="post-list">
+                <li class="post-item post-item-name" id="name">{{username}}</li>
+                <li class="post-item" id="city">{{this.city.city_name}}</li>
+                <li class="post-item" id="gym">{{this.gym.gym_name}}</li>
+                <li class="post-item" id="workout">{{this.workout.workout_name}}</li>
+                <li class="post-item" id="email">{{this.email}}</li>
+            </ul>
+        {{!-- </section> --}}
+    </section>
+{{/each}}
+{{!-- </section> --}}

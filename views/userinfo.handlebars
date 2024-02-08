@@ -1,0 +1,81 @@
+<div class="card userinfo-page">
+    <section class="card-header">
+        <h2>Tell Us a Little Bit About Yourself:</h2>
+    </section>
+    <section class="form userinfo-form">
+        <div>
+            <label class="userinforForm-label" for="gender-dropdown" id="gender-dropdown"></label>
+            <select class="userinforForm-dropdown" name="gender-options" id="gender-options">
+                <option value="" disabled selected>Select your gender</option>
+                <option value="Male">Male</option>
+                <option value="Female">Female</option>
+                <option value="Other">Other</option>
+                <option value="Prefer Not to Answer">Prefer Not to Answer</option>
+            </select>
+        </div>
+        <div>
+            <label class="userinforForm-label" for="city-dropdown" id="city-dropdown"></label>
+            <select class="userinforForm-dropdown" name="city-options" id="city-options">
+                <option value="" disabled selected>Select your city</option>
+                {{#each cities}}
+                <option value="{{this.id}}">{{this.city_name}}</option>
+                {{/each}}
+                {{!-- <option value="TORONTO">Toronto</option>
+                <option value="RICHMOND-HILL">Richmond Hill</option>
+                <option value="MARKHAM">Markham</option>
+                <option value="SCARBOROUGH">Scarborough</option>
+                <option value="BRAMPTON">Brampton</option>
+                <option value="AJAX">Ajax</option>
+                <option value="OAKVILLE">Oakville</option>
+                <option value="MISSISSAUGA">Mississauga</option>
+                <option value="BURLINGTON">Burlington</option>
+                <option value="MILTON">Milton</option>
+                <option value="CALEDON">Caledon</option>
+                <option value="HALTON HILLS">Halton Hills</option>        
+                <option value="NEWMARKET">Newmarket</option>
+                <option value="OSHAWA">Oshawa</option>
+                <option value="YORK">York</option>       
+                <option value="VAUGHAN">Vaughan</option> --}}
+            </select>
+        </div>
+        <div>
+            <label class="userinforForm-label" for="gym-dropdown" id="gym-dropdown"></label>
+            <select class="userinforForm-dropdown" name="gym-options" id="gym-options">
+                <option value="" disabled selected>Select your gym</option>
+                {{#each gyms}}
+                <option value="{{this.id}}">{{this.gym_name}}</option>
+                {{/each}}
+                {{!-- <option value="LA FITNESS">LA Fitness</option>
+                <option value="GOODLIFE FITNESS">Goodlife Fitness</option>
+                <option value="YMCA">YMCA</option>
+                <option value="ORANGETHEORY FITNESS">Orangetheory</option>
+                <option value="BODY VISION FITNESS">Body Vision</option>
+                <option value="UP & FIT FITNESS">Up &amp; Fit Fitness</option> --}}
+            </select>
+        </div>
+        <div>
+            <label class="userinforForm-label" for="workout-dropdown" id="workout-dropdown"></label>
+            <select class="userinforForm-dropdown" name="workout-options" id="workout-options">
+                <option value="" disabled selected>Choose your workout</option>
+                {{#each workouts}}
+                <option value="{{this.id}}">{{this.workout_name}}</option>
+                {{/each}}
+                {{!-- <option value="Strength training">Strength training</option>
+                <option value="Aerobic exercise">Aerobic exercise</option>
+                <option value="Yoga">Yoga</option>
+                <option value="High-intensity training">High-intensity training</option>
+                <option value="Pilates">Pilates</option>
+                <option value="Walking">Walking</option>
+                <option value="Running">Running</option>
+                <option value="Functional strength training">Functional strength training</option>
+                <option value="Core training">Core training</option>
+                <option value="Cycling">Cycling</option>
+                <option value="Cardio">Cardio</option>
+                <option value="Weight lifting">Weight lifting</option>            --}}
+            </select>
+        </div>
+
+        <button class="button userBtn">Create Profile!</button>
+    </section>
+</div>
+<script src="/js/userinfo.js"></script>
